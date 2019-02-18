@@ -26,8 +26,13 @@ namespace Sudoku_2
                 {
                     for (int y = 0; y < 9; y++)
                     {
-                        if (SudokuPuzzle[x, y] == 0) finished = false;
+                        if (SudokuPuzzle[x, y] == 0)
+                        {
+                            finished = false;
+                            break;
+                        }
                     }
+                    if (!finished) break;
                 }
             }
             DateTime endDate = DateTime.Now;
